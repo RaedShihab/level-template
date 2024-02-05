@@ -1,0 +1,40 @@
+
+
+$color-primary: #ee5057;
+$color-secondary: #111;
+$color-text: #898989;
+$color-light: #f4f4f4;
+$color-sky: #86b7fe;
+
+/* FONTS */
+$font-primary:
+'Open Sans', Helvetica, Arial, sans-serif;
+$font-bold: 700;
+$font-light: 400;
+$font-size-text: 13px;
+$font-size-title: 20px;
+$font-size-section-title: 48px;
+
+/* SIZE */
+$size-primary: 25px;
+$size-double: $size-primary * 2;
+$size-half: calc($size-primary / 2);
+
+$margin-primary: $size-primary;
+$margin-double: $size-double;
+$margin-half: $size-half;
+$padding-primary: $size-primary;
+$padding-double: $size-double;
+$padding-half: $size-half;
+$height-primary: 120px;
+
+// screen media
+$extraSmallScreen: '(min-width: 0px) and (max-width: 576px)';
+$smallScreen: '(min-width: 578px) and (max-width: 767px)';
+$mediumScreens: '(min-width: 768px) and (max-width: 992px)';
+$largeScreens: '(min-width: 993px) and (max-width: 1200px)';
+$extraLargeScreens: '(min-width: 1201px)';
+
+$small-medium-screens: '(max-width: 992px)';
+$small-medium-large-screens: '(min-width: 576px)';
+

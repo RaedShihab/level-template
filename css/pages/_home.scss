@@ -1,0 +1,314 @@
+body {
+    // font-family: $font-primary;
+}
+// search section
+.search-form {
+    @include flex-center;
+    height: 70vh;
+    @include extraSmallMedia {
+        display: block;
+        height: fit-content;
+        padding: 25px;
+    }
+    @include prifexer(background-image, url('https://nourhomsi.net/level/assets/img/bg-img-1.jpg'), webkit moz o ms);
+    // background-image: url('./bg-img-1.jpg');
+    // background-size: contain;
+    .container {
+        form {
+            background-color: #fff;
+            padding: 40px;
+            @include flex-between;
+            flex-wrap: wrap;
+            @include extraSmallMedia {
+                display: block;
+            }
+            div:first-child {
+                flex: 100%;
+            }
+            div {
+                position: relative;
+                width: 32%;
+                @include extraSmallMedia {
+                    width: 100%;
+                }
+            }
+            div input {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            div i {
+                position: absolute;
+                left: 10px;
+                line-height: 50px;
+                color: $color-primary;
+            }
+            input::placeholder {
+                text-transform: capitalize;
+                padding: 0 30px;
+            }
+            input[type = submit] {
+                background-color: $color-primary;
+                color: $color-light;
+            }
+            input:focus {
+                outline: $color-sky 5px solid;
+            }
+        }
+    }
+}
+//end search section
+.subs {
+    background-color: $color-primary;
+    color: #fff;
+    padding: $padding-double;
+    .container {
+        h2 {
+            font-size: $font-size-section-title;
+        }
+        a {
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+            color: $color-primary;
+            }
+        }
+    }
+}
+// services
+.services-sec {
+    padding-top: 100px;
+    position: relative;
+    color: $color-primary;
+    .section-down-arrow {
+        height: 120px;
+        width: 100%;
+        position: absolute;
+        top: -1px;
+    }
+    .container {
+        .services {
+            @include flex-between;
+            flex-wrap: wrap;
+            .serv {
+                width: 32%;
+                padding: 10px;
+                transition: 0.2s;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0px 0px 20px #888888;
+                    transform: perspective(200px) translateZ(20px);
+                }
+                i {
+                    font-size: 50px;
+                    margin: 10px 0;
+                }
+                p {
+                    margin: 10px 0;
+                }
+                a {
+                    background-color: $color-primary;
+                    color: #fff;
+                }
+                @include small-medium-screens {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+// end services
+// recommended places
+.recommended-places {
+    padding: $padding-double 0;
+    background-color: $color-light;
+    .container {
+        position: relative;
+        #next, #prev {
+            @include small-medium-screens {
+                display: none;
+            }
+            position: absolute;
+            top: calc(100% - 60px);
+            background-color: $color-secondary;
+            color: #fff;
+            font-weight: $font-bold;
+            padding: $padding-half;
+            border-radius: 50%;
+        }
+        #next {
+            left: 65%;
+        }
+        @include flex-between;
+        justify-content: start;
+        // gap: $size-primary;
+        @include small-medium-screens {
+            display: block;
+        }
+        align-items: start;
+        h3, h4 {
+            font-size: $font-size-title;
+        }
+        .multipel-items {
+            width: 70%;
+            .slick-slide {
+                margin-right: $size-half;
+            }
+            @include small-medium-screens {
+                width: 100%;
+            }
+            section {
+                background-color: #fff;
+                padding: 0 0 $padding-half;
+                .info {
+                    padding: $padding-half $padding-half 0;
+                    h3, h4 {
+                        color: $color-primary;
+                    }
+                    p {
+                        color: $color-text;
+                        font-size: $font-size-text;
+                    }
+                    a {
+                        color: #fff;
+                        background-color: $color-primary;
+                    }
+                }
+                div {
+                }
+                img {
+                    width: 100%;
+                    // padding-bottom: $padding-half;
+                }
+            }
+        }
+        .side {
+            width: 30%;
+            @include small-medium-screens {
+                width: 100%;
+            }
+            @include small-medium-screens {
+               margin-top: $margin-double
+            }
+            background-color: #fff;
+            p {
+                margin: 0;
+                font-size: $font-size-text;
+                
+            }
+            .sub-header {
+                padding: $padding-half;
+                margin-bottom: $margin-half;
+                background-color: $color-primary;
+                color: #fff;
+            }
+            .countries {
+                padding: $padding-half;
+                div {
+                    @include flex-between;
+                    justify-content: start;
+                    gap: 10px;
+                    background-color: $color-light;
+                    &:not(:last-child) {
+                        margin-bottom: $margin-primary
+                    };
+                }
+            }
+        }
+    }
+}
+// recommended places
+
+// video
+.video {
+    position: relative;
+    height: 515px;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        @include flex-center; 
+        i {
+            color: #fff;
+            font-size: $font-size-section-title;
+            z-index: 5;
+            cursor: pointer;
+        }
+    }
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+// end video
+
+//
+.contact-us {
+    padding: $size-double;
+    .container {
+        @include flex-between;
+        align-items: start;
+        gap: $size-primary;
+        @include small-medium-screens {
+                   display: block;
+                }
+        .map iframe{
+            // width: 50%;
+            @include small-medium-screens {
+                width: 100%;
+                height: 100%;
+             }
+        }
+        form {
+            background-color: #fff;
+            width: 50%;
+            @include small-medium-screens {
+                width: 100%;
+             }
+            div {
+                position: relative;
+                // width: 32%;
+            }
+            div input {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: $color-light;
+            }
+            textarea {
+                background-color: $color-light;
+                width: 100%;
+            }
+            div i {
+                position: absolute;
+                left: 10px;
+                line-height: 50px;
+                color: $color-primary;
+            }
+            input::placeholder {
+                text-transform: capitalize;
+                padding: 0 30px;
+            }
+            input[type = submit] {
+                background-color: $color-primary;
+                color: $color-light;
+            }
+            input:focus {
+                outline: $color-sky 5px solid;
+            }
+        }
+    }
+}
+//
+
+
+.footer {
+    background-color: #000000;
+    text-align: center;
+    color: #fff;
+    padding: $padding-primary;
+}
